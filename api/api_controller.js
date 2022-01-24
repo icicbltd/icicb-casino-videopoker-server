@@ -38,7 +38,7 @@ function Check(card, cardCopy, data) {
     } else if (get.msg != "") {
         switch (get.msg) {
             case "JACKS OR BETTER":
-                if (newArray[get.active[0]] > 8 && newArray[get.active[0]] < 12) {
+                if (newArray[get.active[0]] > 8 && newArray[get.active[0]] < 13) {
                     msg = get.msg;
                     raiseprice = data.betAmount * 1;
                     active_array = get.active;
@@ -213,7 +213,6 @@ const cases = [
     },
 ]
 function getArray(num, max) {
-    var array = [];
     for (var i = 0; i < num;) {
         var random = getRandomInt(max);
         if (array.indexOf(random) == -1) {
@@ -238,8 +237,6 @@ module.exports = {
             userToken: token,
             amount: amountValue
         }
-        console.log(req.body);
-        console.log("!!!", user[token].userToken);
         try {
             try {
                 await axios.post(
