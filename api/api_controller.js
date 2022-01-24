@@ -213,6 +213,7 @@ const cases = [
     },
 ]
 function getArray(num, max) {
+    var array = [];
     for (var i = 0; i < num;) {
         var random = getRandomInt(max);
         if (array.indexOf(random) == -1) {
@@ -249,7 +250,6 @@ module.exports = {
             } catch (err) {
                 throw new Error("Bet Error!");
             }
-
             var card = getArray(5, 51);
             var cardCopy = [...card];
             card.sort(function (a, b) { return a - b });
