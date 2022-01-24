@@ -242,7 +242,7 @@ module.exports = {
                 await axios.post(
                     process.env.PLATFORM_SERVER + "api/games/bet",
                     {
-                        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWVkNWZlNzY3OWEzNjc1MDBhYTc0NjUiLCJhY2NvdW50IjoiMHhCNTczMTZkOTZiZDA1MzJiYUQxQ0JDNzgyZUNhRjZjMGE0ZDc0RDVDIiwiYmFsYW5jZSI6OTU2LjMzMjk5OTk5OTk5OTYsIm5hbWUiOiJBbGZyZWQiLCJlbWFpbCI6IlZhY2FudGVMb3JlbmViYU5AZ21haWwuY29tIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9kNDE1ZjBlMzBjNDcxZGZkZDliYzRmODI3MzI5ZWY0OD9zPTIwMCZyPXBnJmQ9bW0iLCJkYXRlIjoiMjAyMi0wMS0yM1QxNDowMjoxNS40NzFaIiwiYWxsb3dhbmNlcyI6W3siZ2FtZVBvb2xBZGRyZXNzIjoiMHg1YzBiQTdEOTlDNzZGMzI5ODNlOTM3Qjg2RDVDZjU2MzM1QWU1RDg0IiwiYW1vdW50Ijo0NC45LCJfaWQiOiI2MWVkNmM0MDY3OWEzNjc1MDBhYWI0M2YifSx7ImdhbWVQb29sQWRkcmVzcyI6IjB4RjA3YjE1NzZFODNEMDgyMzlCMGQzYTIyOGJmMzUwQjAyMGI4N0M2YyIsImFtb3VudCI6MTAwLjUzMzAwMDAwMDAwMDA5LCJfaWQiOiI2MWVkNzE3YTY3OWEzNjc1MDBhYWUwOTIifSx7ImdhbWVQb29sQWRkcmVzcyI6IjB4YkJGMWQ5MTRlM2QzQzhlNThhZTA5OEZlOTgyOUI1QjZDQUE1NkU1RiIsImFtb3VudCI6MTAwLCJfaWQiOiI2MWVkNzIwMzY3OWEzNjc1MDBhYWU0NTEifV0sIl9fdiI6MywiaWF0IjoxNjQzMDExNDI4LCJleHAiOjE2NDM1Mjk4Mjh9.pw6UkzezhDBeMrgbCjKYOj5MhQvBQrvEXSZciZwJ_Hw",
+                        token: user[token].userToken,
                         amount: user[token].betAmount,
                     }
                 );
@@ -259,7 +259,7 @@ module.exports = {
                 await axios.post(
                     process.env.PLATFORM_SERVER + "api/games/winlose",
                     {
-                        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWVkNWZlNzY3OWEzNjc1MDBhYTc0NjUiLCJhY2NvdW50IjoiMHhCNTczMTZkOTZiZDA1MzJiYUQxQ0JDNzgyZUNhRjZjMGE0ZDc0RDVDIiwiYmFsYW5jZSI6OTU2LjMzMjk5OTk5OTk5OTYsIm5hbWUiOiJBbGZyZWQiLCJlbWFpbCI6IlZhY2FudGVMb3JlbmViYU5AZ21haWwuY29tIiwiYXZhdGFyIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9kNDE1ZjBlMzBjNDcxZGZkZDliYzRmODI3MzI5ZWY0OD9zPTIwMCZyPXBnJmQ9bW0iLCJkYXRlIjoiMjAyMi0wMS0yM1QxNDowMjoxNS40NzFaIiwiYWxsb3dhbmNlcyI6W3siZ2FtZVBvb2xBZGRyZXNzIjoiMHg1YzBiQTdEOTlDNzZGMzI5ODNlOTM3Qjg2RDVDZjU2MzM1QWU1RDg0IiwiYW1vdW50Ijo0NC45LCJfaWQiOiI2MWVkNmM0MDY3OWEzNjc1MDBhYWI0M2YifSx7ImdhbWVQb29sQWRkcmVzcyI6IjB4RjA3YjE1NzZFODNEMDgyMzlCMGQzYTIyOGJmMzUwQjAyMGI4N0M2YyIsImFtb3VudCI6MTAwLjUzMzAwMDAwMDAwMDA5LCJfaWQiOiI2MWVkNzE3YTY3OWEzNjc1MDBhYWUwOTIifSx7ImdhbWVQb29sQWRkcmVzcyI6IjB4YkJGMWQ5MTRlM2QzQzhlNThhZTA5OEZlOTgyOUI1QjZDQUE1NkU1RiIsImFtb3VudCI6MTAwLCJfaWQiOiI2MWVkNzIwMzY3OWEzNjc1MDBhYWU0NTEifV0sIl9fdiI6MywiaWF0IjoxNjQzMDExNDI4LCJleHAiOjE2NDM1Mjk4Mjh9.pw6UkzezhDBeMrgbCjKYOj5MhQvBQrvEXSZciZwJ_Hw",
+                        token: user[token].userToken,
                         amount: response.raisePrice,
                         winState: response.raisePrice != 0 ? true : false,
                     }
